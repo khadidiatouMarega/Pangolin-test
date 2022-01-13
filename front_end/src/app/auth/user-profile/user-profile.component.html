@@ -1,0 +1,82 @@
+<div style="margin-top: 30px;margin-bottom: 200px;">
+  <div style="text-align: center;">
+    <h1 style="font-size: 35px;">
+     Bienvenu Pangolin {{namee}}
+    </h1>
+  </div>
+
+  <div style="width: 500px; margin-left: 590px;">
+    <table class="table" >
+      <thead>
+        <tr>
+          <th>Age</th>
+          <th>Rôle</th>
+          <th> Amis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{agee}} ans</td>
+          <td>{{famillee}}</td>
+          <div style="display: flex;" *ngFor="let item of nameList ">
+          <td><p>{{item.name}} </p></td>
+          <div style="pointer-events: auto; margin-top: 8px;" (click)="deleteFriend(Id)">
+            ⛔
+          </div>
+        </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top: 20px; display: flex;">
+    <div style="width: 300px; margin-left: 600px;margin-right: 300px;">
+      <h1 style="font-size: 25px; "> Modifier le profil</h1>
+      <form #upadateForm="ngForm">
+        <div class="field">
+          <label class="label">Âge</label>
+          <div class="control">
+            <input class="input" type="number" [(ngModel)]="formData.age" #age="ngModel" placeholder="Âge" name="age"
+              required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Rôle</label>
+          <div class="control">
+            <div class="select">
+              <select [(ngModel)]="formData.famille" #famille="ngModel" name="famille" required>
+                <option></option>
+                <option value="Sorcier">Sorcier</option>
+                <option value="Alchimiste">Alchimiste</option>
+                <option value="Guerrier">Guerrier</option>
+                <option value="Enchanteur">Enchanteur</option>
+                <option value="Espion">Espion</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link" (click)="update()" type="submit"
+              [disabled]="!upadateForm.form.valid">Modifier</button>
+          </div>
+        </div>
+      </form>
+    </div>
+      
+     <!-- <h1 style="  font-size: 25px;"> Mes Amis</h1>
+      <ng-container *ngIf="taille()">
+        {{mess}}
+      </ng-container>
+      <div style="display: flex;" *ngFor="let item of nameList ">
+        <div style="margin-right: 40px;">
+          <p>{{item.name}} </p>
+        </div>
+        <div style="pointer-events: auto; margin-bottom: 190px;" (click)="deleteFriend(Id)">
+          ⛔
+        </div> 
+      </div>  -->
+
+</div>

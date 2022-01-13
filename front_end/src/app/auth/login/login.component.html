@@ -1,0 +1,28 @@
+<div style="margin-top: 30px; margin-bottom: 190px;">
+    <div style="display: flex; margin-top: 60px;">
+        <div style="width: 300px; margin: 0 auto;">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input class="input" type="email" placeholder="Email" formControlName="email">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Mot de passe</label>
+                    <div class="control">
+                        <input class="input" type="password" placeholder="Mot de passe" formControlName="password">
+                    </div>
+                </div>
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button type="submit" class="button is-link" [disabled]="!loginForm.valid">Connexion</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

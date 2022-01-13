@@ -1,0 +1,66 @@
+<div style="margin-top: 30px;">
+  <div style="margin-top: 20px;">
+    <div style="width: 300px; margin: 0 auto;">
+      <form #registerForm="ngForm">
+        <div class="field">
+          <label class="label">Nom</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Nom" [(ngModel)]="formData.name" name="name" #name="ngModel"
+              required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="email" placeholder="Email" [(ngModel)]="formData.email" name="email"
+              #email="ngModel" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Mot de passe</label>
+          <div class="control">
+            <input class="input" type="password" placeholder="Mot de passe" [(ngModel)]="formData.password"
+              #password="ngModel" name="password" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Âge</label>
+          <div class="control">
+            <input class="input" type="number" placeholder="Âge" [(ngModel)]="formData.age" #age="ngModel" name="age"
+              required>
+          </div>
+        </div>
+
+      
+
+        <div class="field">
+          <label class="label">Rôle</label>
+          <div class="control">
+            <div class="select">
+              <select [(ngModel)]="formData.famille" #famille="ngModel" name="rôle" required>
+                <option></option>
+                <option value="Sorcier">Sorcier</option>
+                <option value="Alchimiste">Alchimiste</option>
+                <option value="Guerrier">Guerrier</option>
+                <option value="Enchanteur">Enchanteur</option>
+                <option value="Espion">Espion</option>
+                
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link" (click)="register()" type="submit"
+              [disabled]="!registerForm.form.valid">Inscription</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

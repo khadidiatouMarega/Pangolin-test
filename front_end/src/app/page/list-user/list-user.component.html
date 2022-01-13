@@ -1,0 +1,41 @@
+<div style=" margin: 0 auto;">
+    <div style="margin-top: 30px;">
+        <h1 style="text-align: center; font-size: 35px;">Liste des Pangolins</h1>
+    </div>
+</div>
+
+<div style="display: flex;">
+
+    <div style="width: 500px; margin: 0 auto;border-style: ridge;border-radius: 10px;padding: 10px; ">
+        <div style="display: flex; border-bottom-style: ridge;">
+            <div style="margin-left: 10px;">
+                <h1><strong>Nom</strong></h1>
+            </div>
+            <div style="margin-left: 50px;">
+                <h1><strong>Age</strong></h1>
+            </div>
+            <div style="margin-left: 40px;">
+                <h1><strong>Famille</strong></h1>
+            </div>
+        </div>
+        <div style="display: flex;margin-top: 30px;" *ngFor="let item of users">
+            <div style="margin-left: 10px; width: 40px;">
+                <h1><strong>{{item.name}}</strong></h1>
+            </div>
+            <div style="margin-left: 50px; width: 30px;">
+                <h1>{{item.age}} ans</h1>
+            </div>
+            <div style="margin-left: 40px; width: 70px;">
+                <h1>{{item.famille}}</h1>
+            </div>
+            <div style="margin-left: 50px;"><button type="submit" class="button is-primary is-rounded"
+                    (click)="addFriend(item._id)">
+                   Ajouter +
+                </button>
+            </div>
+          
+        </div>
+    </div>
+
+</div>
+<div  style="margin-top: 250px;"></div>
