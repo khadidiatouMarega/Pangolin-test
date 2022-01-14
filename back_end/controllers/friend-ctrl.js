@@ -34,8 +34,6 @@ const getFriend = async (req, res) => {
     }).catch(err => console.log(err))
 }
 
-
-//exportations des fonctionnalité
 module.exports = {
     addFriend,
     deleteFriend,

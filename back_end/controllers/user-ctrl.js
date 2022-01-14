@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const { registerValidation } = require('../validation');
 const { loginValidation } = require('../validation')
 
-//creation d'un compte 
+//inscription
 postRegister = async (req,res) => {
     const { error } = registerValidation(req.body);
     if (error) return res.status(400).send(error.details[0].message);
@@ -44,7 +44,7 @@ postLogin = async (req,res) => {
     res.header('auth-token', token).send(token);
 }
 
-//recherche une personne par son nom
+//recherche un membre par id
 getUserByName = async (req, res) => {
     var id = req.params.id
     await User.findOne({ _id: id }, (err, user) => {
@@ -59,7 +59,7 @@ getUserByName = async (req, res) => {
     }).catch(err => console.log(err))
 }
 
-//recherche tout les membre de la db
+//lister les membre de la db
 getUser = async (req, res) => { 
     await User.find({}, (err, user) => {
         if (err) {
@@ -73,7 +73,7 @@ getUser = async (req, res) => {
     }).catch(err => console.log(err))
 }
 
-//modification d'un utilisateur
+//mise à jour du rôle
 updateUser = async (req, res) => {
     const body = req.body
 
@@ -95,7 +95,6 @@ updateUser = async (req, res) => {
     })
 }
 
-//exportations des fonctionnalité
 module.exports = {
     postRegister,
     postLogin,
