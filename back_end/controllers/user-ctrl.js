@@ -19,8 +19,7 @@ postRegister = async (req,res) => {
         name: req.body.name,
         email: req.body.email,
         password: hashdPassword,
-        age: req.body.age,
-        famille: req.body.famille,
+        role: req.body.role,
     })
     try{
         const savedUSer = await user.save()
@@ -85,8 +84,7 @@ updateUser = async (req, res) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }
-        user.age = body.age
-        user.famille = body.famille
+        user.role = body.role
         user.save()
         .then(() => {                                    
             res.status(200).send('User updated!');

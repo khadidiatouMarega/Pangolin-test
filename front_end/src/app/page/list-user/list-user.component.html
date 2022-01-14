@@ -11,22 +11,16 @@
             <div style="margin-left: 10px;">
                 <h1><strong>Nom</strong></h1>
             </div>
-            <div style="margin-left: 50px;">
-                <h1><strong>Age</strong></h1>
-            </div>
             <div style="margin-left: 40px;">
-                <h1><strong>Famille</strong></h1>
+                <h1><strong>Rôle</strong></h1>
             </div>
         </div>
         <div style="display: flex;margin-top: 30px;" *ngFor="let item of users">
             <div style="margin-left: 10px; width: 40px;">
                 <h1><strong>{{item.name}}</strong></h1>
             </div>
-            <div style="margin-left: 50px; width: 30px;">
-                <h1>{{item.age}} ans</h1>
-            </div>
             <div style="margin-left: 40px; width: 70px;">
-                <h1>{{item.famille}}</h1>
+                <h1>{{item.role}}</h1>
             </div>
             <div style="margin-left: 50px;"><button type="submit" class="button is-primary is-rounded"
                     (click)="addFriend(item._id)">
@@ -38,4 +32,3 @@
     </div>
 
 </div>
-<div  style="margin-top: 170px; margin-bottom: -102px;"></div>

@@ -19,11 +19,11 @@ var userSchema = new mongoose.Schema({
         max: 1024, 
         min: 6
     },
-    age: { 
-        type: Number,
-        required: true,
-    },
-    famille: { 
+    // age: { 
+    //     type: Number,
+    //     required: true,
+    // },
+    role: { 
         type: String,
         required: true,
         max: 1024, 

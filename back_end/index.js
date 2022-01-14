@@ -23,6 +23,6 @@ app.use('/api', authRoute, postRoute, friendRoute)
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 app.listen(4242, () => {
-    console.log('Serveur on listening on port 4242')
+    console.log('Serveur is listening')
 });
     

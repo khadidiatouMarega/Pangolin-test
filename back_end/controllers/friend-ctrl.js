@@ -25,7 +25,6 @@ const getFriend = async (req, res) => {
     var id = req.params.id
     await User.findOne({ _id: id }, (err, user) => {
         if (err) {
-            // console.log(req.params,'teeeest');
             return res.status(400).json({ success: false, error: err })
         }
         if (!user) {

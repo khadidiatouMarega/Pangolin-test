@@ -1,6 +1,5 @@
 export interface User {
     name: string,
     email: string,
-    age: number,
-    famille: string
+    role: string
 }

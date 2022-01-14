@@ -15,8 +15,7 @@ export class UserProfileComponent implements OnInit {
   private uriseg = 'http://localhost:4242/api';
   currentUser = {};
   namee: any[]
-  agee: any[]
-  famillee: any[]
+  rolee: any[]
   formData: any = {};
   errors: any = [];
   id: any[]
@@ -34,9 +33,8 @@ export class UserProfileComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params.id
 
     this.userService.show(id).subscribe((res: any) => {
-      this.agee = res.age
       this.namee = res.name
-      this.famillee = res.famille
+      this.rolee = res.role
     })
 
     this.userService.showFriend(id).subscribe((res: any) => {
@@ -57,7 +55,7 @@ export class UserProfileComponent implements OnInit {
   taille(){
     var taille = this.length
     if (taille == undefined) {
-      this.mess = "Pas d'amis 😢"
+      this.mess = "Vous n'avez pas encore d'amis!"
       return this.mess
     }
   }

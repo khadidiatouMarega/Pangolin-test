@@ -12,10 +12,10 @@ const registerValidation = data => {
         password: Joi.string()
             .min(6)
             .required(),
-        age: Joi.number()
-            .min(1)
-            .required(),
-        famille: Joi.string()
+        // age: Joi.number()
+        //     .min(1)
+        //     .required(),
+        role: Joi.string()
             .min(6)
             .required(),
     })

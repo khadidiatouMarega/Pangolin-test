@@ -4,7 +4,7 @@ const router = express.Router();
 
 const UserCtrl = require('../controllers/user-ctrl')
 
-//route API
+//routes
 router.post('/register', UserCtrl.postRegister);
 router.post('/login', UserCtrl.postLogin)
 router.get('/users', UserCtrl.getUser)

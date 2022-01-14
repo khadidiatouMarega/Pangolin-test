@@ -15,7 +15,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     CommonModule, 
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
 
   ],
   providers: [AuthService, AuthGuard]
