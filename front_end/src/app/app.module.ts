@@ -1,17 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
-
 import { AppComponent } from './app.component';
 import { FormsModule }   from '@angular/forms';
-import { HeaderComponent } from './partials/header/header.component';
+import { HeaderComponent } from './header/header.component';
 import { appRoutes } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
-// import { AuthComponent } from './auth/auth.component';
 import { AuthModule } from './auth/auth.module';
-import { ListUserComponent } from './page/list-user/list-user.component';
+import { ListUserComponent } from './list-user/list-user.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 
 
@@ -21,7 +19,6 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    // AuthComponent,
     ListUserComponent,
   ],
   imports: [

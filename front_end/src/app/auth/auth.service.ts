@@ -63,7 +63,7 @@ export class AuthService {
       })
   }
 
-  // Partie: Lister les utilisateurs, ajouter et supprimer des amis
+  // Lister les utilisateurs, ajouter et supprimer des amis
   list(): Observable<User[]> {
     const URI = this.uriseg + '/users';
     return this.http.get(URI).pipe(
@@ -106,7 +106,7 @@ export class AuthService {
     );
   }
 
-  // Partie: modifier le profil
+  // Modifier le rôle
   getUserProfile(id): Observable<any> {
     const URI = this.uriseg + '/user/';
     const URITOKEN = this.uriseg + '/post'

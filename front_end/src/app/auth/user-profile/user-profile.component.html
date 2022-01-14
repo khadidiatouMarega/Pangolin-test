@@ -7,19 +7,22 @@
     <table class="table" >
       <thead>
         <tr>
-          <th> Amis</th>
           <th>Rôle</th>
+          <th> Amis</th>
         </tr>
       </thead>
       <tbody>
         <tr>
+          <td>{{rolee}}</td>  
+          <ng-container *ngIf="taille()" >
+            {{mess}}
+          </ng-container>
           <div style="display: flex;" *ngFor="let item of nameList ">
           <td><p>{{item.name}} </p></td>
           <div style="pointer-events: auto; margin-top: 8px;" (click)="deleteFriend(Id)">
             ⛔
           </div>
         </div>
-          <td>{{rolee}}</td>
         </tr>
       </tbody>
     </table>
@@ -65,5 +68,5 @@
       </form>
     </div>
   </div>
-  <div style="margin-bottom: -78px"></div>
+  <div style="margin-bottom: -52px"></div>
 </div>
